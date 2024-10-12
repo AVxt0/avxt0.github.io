@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                serif: ['Merriweather', 'serif'],
+                }
+            extend: {
+
+            }
+          }
+        }
+      </script>
+
+    <style type="text/tailwindcss">
+        .btn{
+          @apply bg-blue-700 rounded-md px-4 py-1.5 cursor-pointer hover:bg-white hover:text-zinc-900 transition-colors duration-150
+        }
+    </style>
+</head>
+<body class="bg-zinc-900 text-zinc-200 font-sans">
+    <div class="flex flex-col items-center justify-center h-screen">
+        <h1 class="text-3xl font-bold py-0.5">Quick Links</h1>
+        <div id="cheats" class="text-center">
+            <h2 class="text-lg py-0.5">Cheats</h2>
+            <div class="py-0.5 flex flex-col space-y-2">
+                <button class="btn" href="" target="_blank">fh4 aio</button>
+                <button class="btn" href="" target="_blank">fh5 aio</button>
+                <button class="btn" href="" target="_blank">combat master</button>
+            </div>
+        </div>
+        <div id="utilities" class="text-center">
+          <h2 class="text-lg py-0.5">Utilities</h2>
+          <div class="py-0.5 flex flex-col space-y-2">
+              <button class="btn" href="" target="_blank">vencord</button>
+              <button class="btn" onclick='copyToClipboard("iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex")''>spicetify</button>
+              <button class="btn" onclick='copyToClipboard("iwr -useb \"https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/scripts/install.ps1\" | iex")'>millenium</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('powershell command has been copied to clipboard.');
+    }).catch(err => {
+      console.error('Error copying text: ', err);
+    });
+  }
+</script>
+</body>
+</html>
